@@ -98,7 +98,7 @@ pub struct OrderEvent {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(tag = "type", content = "data")]
+#[serde(tag = "type", content = "data", rename_all = "lowercase")]
 pub enum ClientEvent {
     Trade(TradeExecutedEvent),
     Metric(AccountMetricEvent),
